@@ -1,0 +1,49 @@
+######packetbeat
+
+在需監測的機器上安裝packetbeat image
+
+>> docker pull docker.elastic.co/beats/packetbeat:6.6.1
+載入面板
+>>docker run \
+--cap-add=NET_ADMIN \
+docker.elastic.co/beats/packetbeat:6.6.1 \
+setup -E setup.kibana.host=kibana:5601 \
+-E output.elasticsearch.hosts=["elasticsearch:9200"]
+建立docker 容器
+>>docker run --cap-add=NET_ADMIN docker.elastic.co/beats/packetbeat:6.6.1
+
+至kibana DEV TOOLS查看資料
+>>GET _cat/indices?v
+
+-------------------------------------------------------------------------------------------------
+
+@更改 Hostname
+
+# sudo hostnamectl --static set-hostname <host-name>
+
+@更改網卡 DNS
+
+# vi /etc/sysconfig/network-scripts/ifcfg-ens160 (網卡1)
+
+重啟機器--init 6(重讀網卡的值)
+--------------------------------------------------------------------------------------------------
+search gmail.com > 定義網域(若沒寫完整的FQDN(完整網域名稱)會去查詢該網域主機的IP)
+
+cat resolv.conf
+
+修改主機名稱：vi /etc/sysconfig/network 
+
+
+-build/pull gcp image 
+
+https://hub.docker.com/r/jasonrivers/nagios/
+
+---------------------------------------------------------------------------------------------------
+
+wrk 壓力測試
+
+https://www.restran.net/2016/09/27/wrk-http-benchmark/
+
+wrk -t12 -c400 -d30s --latency http://$LB_IP/ (自己的ip)
+
+

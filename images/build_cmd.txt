@@ -1,0 +1,95 @@
+######build command
+
+啟動Advisor
+
+#docker run --volume=/:/rootfs:ro --volume=/etc/localtime:/etc/localtime:ro --volume=/var/run:/var/run:rw --volume=/sys/fs/cgroup/:/sys/fs/cgroup:ro --volume=/var/lib/docker/:/var/lib/docker:ro --publish=8080:8080 --detach=true google/cadvisor -storage_driver=influxdb -storage_driver_db=cadvisor -storage_driver_host=influxdb
+
+啟動elasticsearch
+docker run -d --name=elasticsearch -p 9200:9200 -p 9300:9300 elasticsearch 
+
+chronograf
+#docker run -d --volume=/etc/localtime:/etc/localtime:ro --name chronograf -p 8888:8888 -v /var/lib/chronograf:/var/lib/chronograf \docker.io/chronograf  --influxdb-url=http://10.140.20.202:8086
+
+啟動rancher
+
+#docker run -d --restart=always -p 8080:8080 rancher/server
+
+啟動 redis
+
+#docker run -d --name elk-redis -p 6379:6379 -v /data/redis:/data --restart=always redis:3.2.4 redis-server --maxmemory 4gb --requirepass QFkXXBZkLD6MgcEL1y8l
+
+
+elasticsearch
+
+#docker run -d --name elk-elasticsearch -p 9200:9200 -v /data/elasticsearch:/usr/share/elasticsearch/data --restart=always -e ES_JAVA_OPTS:-Xmx6g -e ES_JAVA_OPTS:-Xms6g -E cluster.name=RDlog -E transport.host=0.0.0.0 -E discovery.zen.ping.unicast.hosts=elk-elasticsearch -E discovery.zen.minimum_master_nodes=1 elasticsearch:5.3.1
+
+logstash
+
+#docker run -d -v /home/lab08/Docker-ELK/Logstash:/usr/games --name elk-logstash -p 5000:5000 --link elk-redis:redis --link elk-elasticsearch:elasticsearch --restart=always logstash:5.3.1
+
+/home/lab08/Docker-ELK/Logstash:/usr/games
+
+kibana
+
+#docker run -d --name elk-kibana -p 80:5601 --link elk-elasticsearch:elasticsearch --restart=always kibana:5.3.1
+
+packetbeat
+
+#dashboard
+
+docker run  --cap-add=NET_ADMIN  docker.elastic.co/beats/packetbeat:6.6.1 setup -E setup.kibana.host=kibana:5601  -E output.elasticsearch.hosts=["10.140.20.202:9200"]
+
+安裝grafana
+
+#docker run -i -p 3000:3000 grafana/grafana
+
+安裝influxdb
+
+#docker run -d -p 8083:8083 -p 8086:8086 --expose 8090 --expose 8099 --name influxsrv tutum/influxdb
+
+安裝nginx
+
+#docker run -d -p 80:80 --name webserver ngx
+
+安裝prometheus
+
+#docker run -d -p 9090:9090 -v /home/lab08/prometheus/prometheus/documentation/examples:/etc/prometheus prom/prometheus 
+
+telegraf
+
+wget https://dl.influxdata.com/telegraf/releases/telegraf_1.3.5-1_amd64.deb
+sudo dpkg -i telegraf_1.3.5-1_amd64.deb
+
+gcp重新分割硬碟 (增加空間，減少需)
+
+gcp加空間
+
+growpart /dev/sda 1
+
+cat /etc/fstab 可看見硬碟格式
+
+resize2fs /dev/sda1  OR  xfs_growfs /dev/sda1
+
+resize2fs 這個是 FOR ext2、ext3、ext4 
+
+### telegraf config for ping port
+
+# # TCP or UDP 'ping' given url and collect response time in seconds
+# [[inputs.net_response]]
+#   ## Protocol, must be "tcp" or "udp"
+#   protocol = "tcp"
+#   ## Server address (default localhost)
+#   address = "github.com:80"
+#   ## Set timeout
+#   timeout = "1s"
+#
+#   ## Optional string sent to the server
+#   # send = "ssh"
+#   ## Optional expected string in answer
+#   # expect = "ssh"
+#   ## Set read timeout (only used if expecting a response)
+#   read_timeout = "1s"
+
+
+
+

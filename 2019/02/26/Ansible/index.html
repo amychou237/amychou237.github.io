@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script>
+  var _hmt = _hmt || []
+  ;(function() {
+    var hm = document.createElement('script')
+    hm.src = 'https://hm.baidu.com/hm.js?5a0acc897fd96474a2c8f4deac84611a'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+  })()
+</script> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    
+    <title>
+      Ansible - AmyChou
+    </title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    
+<link rel="stylesheet" href="/style/style.css">
+
+  <meta name="generator" content="Hexo 4.2.0"></head>
+  <body>
+    <canvas id='pagemap'></canvas>
+    
+    <div id="post-toc" class="animated hiddenToc hide">
+      <span class="title">Toc</span>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#簡介"><span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-apt-安裝-Ansible"><span class="toc-text">Ubuntu (apt) 安裝 Ansible</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#設定ansible-cfg-路徑、使用者名稱、SSH金鑰"><span class="toc-text">設定ansible.cfg(路徑、使用者名稱、SSH金鑰)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#設定-inventory-檔案路徑"><span class="toc-text">設定 inventory 檔案路徑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#遠端使用者名稱"><span class="toc-text">遠端使用者名稱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#設定遠端hosts-為ansible-cfg預設配置"><span class="toc-text">設定遠端hosts(為ansible.cfg預設配置)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ansible-常用模組"><span class="toc-text">ansible 常用模組</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#playbook格式"><span class="toc-text">playbook格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Command"><span class="toc-text">Command</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#ansible-doc-s-command"><span class="toc-text">ansible-doc -s command</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ansible-操作做log紀錄"><span class="toc-text">Ansible 操作做log紀錄</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Role"><span class="toc-text">Role</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#測試”test-yml”playbook的語法是否正確"><span class="toc-text">測試”test.yml”playbook的語法是否正確</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模擬執行playbook"><span class="toc-text">模擬執行playbook</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#windows-路徑格式"><span class="toc-text">windows 路徑格式</span></a></li></ol>
+    </div>
+    
+    <div id="fixed-menu-wrap">
+      <span class="iconfont icon-sousuo search-box menu-reset"></span>
+      <span class="icon-toc menu-reset">Toc</span>
+      <span class="iconfont icon-arrowup menu-reset"></span>
+    </div>
+    <div id="fixed-menu">
+      <span class="iconfont icon-menu-"></span>
+    </div>
+    <div id="progress">
+      <div class="line"></div>
+    </div>
+    <div id="search-shade" class="animated hiddenSearch hide">
+      <div class="input-wrap">
+        <span class="iconfont icon-sousuo search-box"></span>
+        <input type="text" placeholder="Search" />
+        <span class="iconfont icon-close"></span>
+      </div>
+      <div class="search-result">
+        <div class="meta">
+          <span><b id="result-count">0</b> results found</span>
+          <img src="/images/test.PNG" />
+        </div>
+        <ul id="result-box"></ul>
+      </div>
+    </div>
+    <div id="menu-mask" class="animated hideMenuMask hide">
+      <span class="iconfont icon-close"></span>
+      <div class="nav">
+        
+        <a href="/" class="">
+          Home
+        </a>
+        
+        <a href="/archives" class="">
+          Archives
+        </a>
+        
+        <a href="/categories" class="">
+          Categories
+        </a>
+        
+        <a href="/tags" class="">
+          Tags
+        </a>
+        
+        <a href="/friends" class="">
+          Friends
+        </a>
+        
+        <a href="/about" class="">
+          About
+        </a>
+        
+      </div>
+    </div>
+    <div id="header">
+      <div class="intro">
+        <a href="/" class="logo" style="background-image: url('/images/test.PNG')"></a>
+        <div class="author">Amy Chou</div>
+      </div>
+      <div class="nav">
+        <span class="iconfont icon-menu menu-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+    </div>
+    <div id="side" class="animated bounceInLeft">
+      <div class="shrink">
+        <a href="/" class="logo" style="background-image: url('/images/test.PNG')"></a>
+        <span class="iconfont icon-menu toggle-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+      <div class="magnify">
+        <div class="about">
+          <div class="author">Amy Chou</div>
+          <a href="/" class="logo" style="background-image: url('/images/test.PNG')"></a>
+        </div>
+
+        <div class="nav">
+          
+          <a href="/" class="">
+            Home
+          </a>
+          
+          <a href="/archives" class="">
+            Archives
+          </a>
+          
+          <a href="/categories" class="">
+            Categories
+          </a>
+          
+          <a href="/tags" class="">
+            Tags
+          </a>
+          
+          <a href="/friends" class="">
+            Friends
+          </a>
+          
+          <a href="/about" class="">
+            About
+          </a>
+          
+          <a href="#" class="search-box">
+            <span class="iconfont icon-sousuo"></span>
+          </a>
+        </div>
+        <div class="bottom">
+          <div class="follow">
+            
+            <a href="https://github.com/amychou237" target="_block">
+              <span class="iconfont icon-github"></span>
+            </a>
+            
+            <a href="https://www.facebook.com/yu_han" target="_block">
+              <span class="iconfont icon-facebook"></span>
+            </a>
+            
+            <a href="https://www.instagram.com/yu_han_zhou/" target="_block">
+              <span class="iconfont icon-instagram"></span>
+            </a>
+             
+            <a href="/atom.xml" target="_block">
+              <span class="iconfont icon-rss"></span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="main animated bounceInRight delay-0.7s">
+        <article class="post-entry">
+    <div class="header">
+      
+      <div class="title">Ansible</div>
+      <div class="meta">
+        <span class="item">
+          <span class="iconfont icon-time-circle"></span>
+          <span>2019/02/26</span>
+        </span>
+
+        
+          <span class="item leancloud-visitors" id="/2019/02/26/Ansible/" data-flag-title="Ansible">
+            <span class="iconfont icon-eye1"></span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+
+        
+        
+         
+          <span class="item">
+            <span class="iconfont icon-tag1"></span>
+            <span>
+                
+                  
+                    <a href="/tags/Ansible">Ansible</a>
+                  
+                
+            </span>
+          </span>
+         
+      </div>
+      <div>
+      </div>
+    </div>
+    <html><head></head><body><h3 id="簡介">簡介<a class="post-anchor" href="#簡介"></a></h3><p>Asible 為減少重複性工作的操作，使用Playbook編排任務，為Jason格式的YAML文件，為一種輕量化文件，<br>並透過文件的重複使用，使文件占用資源達到最小化，並利於檢視。</p>
+<p>Control Machine (控制) & Managed Node (遠端)</p>
+<p>環境：<br>     控制端 須為 <strong>python 2.6</strong> 以上版本<br>     遠端   須為 <strong>python 2.5</strong> 以上版本</p>
+<p>Windows node ：<br>     WinRM、SSH PowerShell<br>Unix-like node：<br>     SSH  Python </p>
+<p><a href="http://ansible.tw/#!docs/installation.md" target="_blank" rel="noopener">Anisble套件安裝</a></p>
+<h3 id="Ubuntu-apt-安裝-Ansible">Ubuntu (apt) 安裝 Ansible<a class="post-anchor" href="#Ubuntu-apt-安裝-Ansible"></a></h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo apt-get -y install ansible</span><br></pre></td></tr></tbody></table></figure>
+
+
+<h3 id="設定ansible-cfg-路徑、使用者名稱、SSH金鑰">設定ansible.cfg(路徑、使用者名稱、SSH金鑰)<a class="post-anchor" href="#設定ansible-cfg-路徑、使用者名稱、SSH金鑰"></a></h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$vim ansible.cfg</span><br></pre></td></tr></tbody></table></figure>
+
+
+<h3 id="設定-inventory-檔案路徑">設定 inventory 檔案路徑<a class="post-anchor" href="#設定-inventory-檔案路徑"></a></h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inventory =hosts </span><br></pre></td></tr></tbody></table></figure>
+
+
+<h3 id="遠端使用者名稱">遠端使用者名稱<a class="post-anchor" href="#遠端使用者名稱"></a></h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">remote_user = user_name</span><br></pre></td></tr></tbody></table></figure>
+
+
+<h3 id="設定遠端hosts-為ansible-cfg預設配置">設定遠端hosts(為ansible.cfg預設配置)<a class="post-anchor" href="#設定遠端hosts-為ansible-cfg預設配置"></a></h3><p>一般會在 /etc/ansible/hosts ，可copy至自己的資料夾修改。</p>
+<p>用[]可將位址做為群組分類，如以下官方文件範例。而一個hostname或ip可屬於多個群組。</p>
+<p> [webservers]       (群組以括弧表示)<br> alpha.example.org  (可為hosname或是ip)<br> beta.example.org<br> 192.168.1.100<br> 192.168.1.110</p>
+<p>ansible_host 遠端主機位址<br>ansible_port 遠端埠口<br>ansible_user 遠端使用者名稱<br>ansible_pass 遠端密碼 </p>
+<p>設定完可在control machine 下</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ansible all -m ping</span><br></pre></td></tr></tbody></table></figure>
+
+<p>ansible 模組，可用以下指令查詢</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ansible-doc -l</span><br></pre></td></tr></tbody></table></figure>
+
+
+<h3 id="ansible-常用模組">ansible 常用模組<a class="post-anchor" href="#ansible-常用模組"></a></h3><p>shell</p>
+<p>win_shell</p>
+<h3 id="playbook格式">playbook格式<a class="post-anchor" href="#playbook格式"></a></h3><pre><code>ansible迴圈
+
+@使用 {{ item }}跟 with_items的組合來實現類似於一般程式語言中的 For 迴圈概念。
+例：
+     - name: add several users
+       user:
+          name: "{{ item }}"
+          state: present
+          groups: "wheel"
+       with_items:
+          - testuser1
+          - testuser2</code></pre><p><a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_tags.html" target="_blank" rel="noopener">使用ansible tags</a></p>
+<pre><code>tags可使用在一個或多個task中，也可在roles中使用多個tags。
+
+1.always
+     playbook還提供了一個特殊的tags為always。
+     作用就是當使用含有tags：always的task時，無論執行哪一個tags，定義有 always 的tags都會執行。
+  相反的可使用
+  ansible-playbook  123.yaml --skip-tags configuration 來跳過play中含有 configuration 這個tags的 task。
+
+@ansible mode : handlers
+
+可在執行特定任務(某個Task)時觸發特別任務(handler)，handler中可有多個任務，分別屬於不同的(Task)使用。
+當執行 task1 時會觸發 handler1  
+
+     -hosts:localhost
+      remote_user:root
+      tasks:
+      -name:task1
+       file:path=/testdir/testfile
+            state=touch(創建文件)
+       notify:handler1
+
+     handlers:
+     -name:handler1
+     file:path=/testdir/handler1
+            state=touch(創建文件)
+
+若有多個 tasks 需要執行則會將多個 task 執行完畢後才執行觸發的 handlers ，若須在執行完特定 task 後
+立刻執行觸發的 handler ，則可在該特定的 task 下 加入
+
+     meta: flush_handlers
+
+該特定的 handler執行完後才會繼續執行其餘的task。
+
+
+@ansible 創建/刪除目錄
+
+     path=/testdir/a/b  (定義路徑)
+     state:有以下directory(目錄)、touch(文件)、absent(刪除)
+
+@ansible命令應用基礎：
+
+語法: ansible <host-pattern> [-f forks] [-m module_name] [-a args]
+
+      -f forks：啟動的併發執行緒數；
+
+      -m module_name: 要使用的模組；
+
+      -a args: 模組特有的引數；</code></pre><h3 id="Command">Command<a class="post-anchor" href="#Command"></a></h3><p>功能：命令模組，預設模組，用於在遠端主機執行命令，缺點：執行的命令中無法使用變數。</p>
+<h6 id="ansible-doc-s-command">ansible-doc -s command<a class="post-anchor" href="#ansible-doc-s-command"></a></h6><ul>
+<li>name: 在遠端節點執行命令<br>action: command<br>chdir           # 在執行命令之前，先切換到該目錄。<br>creates         # 一個檔名，當這個檔案存在，則該命令不執行。<br>executable      # 切換shell來執行命令，需要使用命令的絕對路徑。<br>free_form=      #要執行的Linux指令，一般使用Ansible的-a引數代替。<br>removes         #一個檔名，這個檔案不存在，則該命令不執行。</li>
+</ul>
+<h3 id="Ansible-操作做log紀錄">Ansible 操作做log紀錄<a class="post-anchor" href="#Ansible-操作做log紀錄"></a></h3><pre><code>修改ansible.cfg下的
+
+log_path = /home/log/ansible.log(自定義)</code></pre><h3 id="Role">Role<a class="post-anchor" href="#Role"></a></h3><p>將重複使用的task獨立出來，寫成一個role，以供其它的playbook使用。</p>
+<p>@ Ansible  Open</p>
+<ul>
+<li>name: Run<br>hosts: linuxserver<br>remote_user: root<br>tasks:<ul>
+<li>name: Open all<br>shell: /Linux/Run_App  (指令)<br>register: shell_result  (變數)<br>failed_when: “‘FAILED’ in shell_result.stderr” (存入變數中)<br>become: true<br>become_user: root<br>args:<br>  chdir: /Linux/</li>
+</ul>
+</li>
+</ul>
+<h3 id="測試”test-yml”playbook的語法是否正確">測試”test.yml”playbook的語法是否正確<a class="post-anchor" href="#測試”test-yml”playbook的語法是否正確"></a></h3><p>ansible-playbook –syntax-check test.yml</p>
+<p>成功會出現以下訊息</p>
+<p> <a href="https://amychou237.github.io/images/000005.png" target="_blank" rel="noopener" data-caption="image" data-fancybox="images"><img src="https://amychou237.github.io/images/000005.png" alt="image"></a></p>
+<h3 id="模擬執行playbook">模擬執行playbook<a class="post-anchor" href="#模擬執行playbook"></a></h3><p>ansible-playbook -C test.yml</p>
+<h3 id="windows-路徑格式">windows 路徑格式<a class="post-anchor" href="#windows-路徑格式"></a></h3><p><a href="https://docs.ansible.com/ansible/latest/user_guide/windows_usage.html#path-formatting-for-windows" target="_blank" rel="noopener">Ansible官方</a></p>
+</body></html>
+
+  
+    <div class="post-reward">
+    <div id="reward-button">打賞</div>
+      <div id="qr">
+        <div class="wrap">
+            
+            <div class="bg-wrap">
+              <a href="/images/zhifubao.png" target="_block" class="bg" style="background-image:url('/images/zhifubao.png')"></a>
+              支付宝
+            </div>
+            
+            
+            <div class="bg-wrap">
+                <a href="/images/weixin.png" target="_block" class="bg" style="background-image:url('/images/weixin.png')"></a>
+                微信
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  
+  <div class="post-guide">
+    <div class="item left">
+        
+          <a href="/2019/05/13/ELK/">Grafana &　ELK</a>
+        
+    </div>
+    <div class="item right">
+        
+          <a href="/2019/02/26/telegraf/">Telegraf</a>
+        
+    </div>
+  </div>
+
+  
+
+  <div class="post-copyright">
+    <div class="auth">
+      本文作者：<a href="http://yoursite.com">Amy Chou</a>
+    </div>
+    <div class="link">
+      永久链接：<a href="http://yoursite.com/2019/02/26/Ansible/">http://yoursite.com/2019/02/26/Ansible/</a>
+    </div>
+    <div class="declare">
+      版权声明：本文首发于<a href="http://yoursite.com">Amy Chou</a>的博客，转载请注明出处！
+    </div>
+  </div>
+
+  <div id="comment"></div>
+
+  
+  
+</article>
+        <footer>
+          <div class="copyright">
+            ©2020
+            <a href="http://yoursite.com">Amy Chou</a> Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> |
+            <a href="https://github.com/shixiaohu2206/hexo-theme-huhu" target="_blank" rel="noopener">hexo-theme-huhu</a>
+          </div>
+          
+        </footer>
+      </div>
+    </div>
+  </body>
+  
+</html>
+<script type="text/javascript">
+                  window.HUHU_CONFIG = JSON.parse("{\"share\":[\"weibo\",\"weixin\",\"qqkongjian\",\"QQ\",\"douban\",\"facebook\",\"twitter\",\"google\"],\"valine\":{\"API_ID\":\"\",\"API_KEY\":\"\"},\"service_worker\":{\"open\":false},\"baidu_tongji\":{\"site_from\":\"2019/7/26\",\"site_id\":\"\",\"access_token\":\"xxxxx\"}}")
+                </script> <script type="text/javascript">window.addEventListener('load', function() {
+    
+    window.loadJs = function(d, m, a) {
+      var c = document.getElementsByTagName('head')[0] || document.head || document.documentElement
+      var b = document.createElement('script')
+      b.defer = true
+      b.setAttribute('type', 'text/javascript')
+      b.setAttribute('charset', 'UTF-8')
+      b.setAttribute('async', 'true')
+      b.setAttribute('src', d)
+      m && b.setAttribute('data-main', '/scripts/app-built')
+      if (typeof a === 'function') {
+        if (window.attachEvent) {
+          b.onreadystatechange = function() {
+            var e = b.readyState
+            if (e === 'loaded' || e === 'complete') {
+              b.onreadystatechange = null
+              a()
+            }
+          }
+        } else {
+          b.onload = a
+        }
+      }
+      c.appendChild(b)
+    }
+    window.loadJs && window.loadJs('https://cdn.bootcss.com/require.js/2.3.6/require.min.js', true, function() {require.config({"paths":{"util":"util","share":"share","search":"search","pagemap":"pagemap.min","registerSW":"registerSW","valine":"cdn/Valine.min","av":["https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min"],"pjax":["https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min"],"jquery":["https://cdn.bootcss.com/jquery/3.4.1/jquery.min"],"confirm":["https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min"],"fancybox":["https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min"],"chart":["https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.bundle.min"]},"map":{"*":{"css":"https://cdn.bootcss.com/require-css/0.1.10/css.min.js"}},"shim":{"fancybox":{"deps":["css!https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css"]},"confirm":{"deps":["css!https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min.css"]},"chart":{"deps":["css!https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.min.css"]}},"waitSeconds":3})})
+  })</script> <script type="text/javascript">
+                  ;(function() {
+                    var bp = document.createElement('script')
+                    var curProtocol = window.location.protocol.split(':')[0]
+                    if (curProtocol === 'https') {
+                      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
+                    } else {
+                      bp.src = 'http://push.zhanzhang.baidu.com/push.js'
+                    }
+                    var s = document.getElementsByTagName('script')[0]
+                    s.parentNode.insertBefore(bp, s)
+                  })()
+                </script> 
