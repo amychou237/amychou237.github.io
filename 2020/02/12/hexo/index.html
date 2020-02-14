@@ -29,7 +29,7 @@
     
     <div id="post-toc" class="animated hiddenToc hide">
       <span class="title">Toc</span>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#修復-hexo-模組缺失"><span class="toc-text">修復 hexo 模組缺失</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#發現node-modules下沒有hexo-server模組"><span class="toc-text">發現node_modules下沒有hexo-server模組</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#重新安裝-hexo-deployer-git"><span class="toc-text">重新安裝 hexo-deployer-git</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#發現git模組還是沒被安裝，重新安裝nodejs組件"><span class="toc-text">發現git模組還是沒被安裝，重新安裝nodejs組件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修復fatal-LF-would-be-replaced-by-CRLF問題"><span class="toc-text">修復fatal: LF would be replaced by CRLF問題</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#使用git推版本時發生以下問題"><span class="toc-text">使用git推版本時發生以下問題</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#取消轉換指令"><span class="toc-text">取消轉換指令</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#修復-hexo-模組缺失"><span class="toc-text">修復 hexo 模組缺失</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#發現node-modules下沒有hexo-server模組"><span class="toc-text">發現node_modules下沒有hexo-server模組</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#重新安裝-hexo-deployer-git"><span class="toc-text">重新安裝 hexo-deployer-git</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#發現git模組還是沒被安裝，重新安裝nodejs組件"><span class="toc-text">發現git模組還是沒被安裝，重新安裝nodejs組件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修復-modified-content-untracked-content-問題"><span class="toc-text">修復(modified content, untracked content)問題</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修復fatal-LF-would-be-replaced-by-CRLF問題"><span class="toc-text">修復fatal: LF would be replaced by CRLF問題</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#使用git推版本時發生以下問題"><span class="toc-text">使用git推版本時發生以下問題</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#取消轉換指令"><span class="toc-text">取消轉換指令</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div id="fixed-menu-wrap">
@@ -209,6 +209,17 @@
 </blockquote>
 <h5 id="發現git模組還是沒被安裝，重新安裝nodejs組件">發現git模組還是沒被安裝，重新安裝nodejs組件<a class="post-anchor" href="#發現git模組還是沒被安裝，重新安裝nodejs組件"></a></h5><blockquote>
 <p>$ npm install</p>
+</blockquote>
+<h3 id="修復-modified-content-untracked-content-問題">修復(modified content, untracked content)問題<a class="post-anchor" href="#修復-modified-content-untracked-content-問題"></a></h3><p><a href="https://amychou237.github.io/images/000016.jpg" target="_blank" rel="noopener" data-caption="image" data-fancybox="images"><img src="https://amychou237.github.io/images/000016.jpg" alt="image"></a></p>
+<p>刪除版本庫中的資料夾重新更新。</p>
+<blockquote>
+<p>$ git rm -rf –cached D:/<em>username</em>/blog/themes/hexo-theme-huhu</p>
+</blockquote>
+<blockquote>
+<p>$ git add –all</p>
+</blockquote>
+<blockquote>
+<p>$ git commit -m “update all”</p>
 </blockquote>
 <h3 id="修復fatal-LF-would-be-replaced-by-CRLF問題">修復fatal: LF would be replaced by CRLF問題<a class="post-anchor" href="#修復fatal-LF-would-be-replaced-by-CRLF問題"></a></h3><h5 id="使用git推版本時發生以下問題">使用git推版本時發生以下問題<a class="post-anchor" href="#使用git推版本時發生以下問題"></a></h5><p><a href="https://amychou237.github.io/images/000015.jpg" target="_blank" rel="noopener" data-caption="image" data-fancybox="images"><img src="https://amychou237.github.io/images/000015.jpg" alt="image"></a></p>
 <p>發現因GIT 源自 UNIX：預設是使用 LF，<br>Windows (CRLF)與 UNIX (LF) 兩個平台的換行符號不相同，<br>所以在 Windows 運行時須進行轉換。</p>
