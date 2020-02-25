@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>AmyChou</title>
+  <icon>http://yoursite.com/icon.png</icon>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-02-25T03:56:30.944Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Amy Chou</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo_blog</title>
+    <link href="http://yoursite.com/2020/02/13/hexo2/"/>
+    <id>http://yoursite.com/2020/02/13/hexo2/</id>
+    <published>2020-02-13T06:02:31.000Z</published>
+    <updated>2020-02-25T03:56:30.944Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h3 id=&quot;新建hexo-blog&quot;&gt;新建hexo blog&lt;a class=&quot;post-anchor&quot; href=&quot;#新建hexo-blog&quot;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h5 id=&quot;windows前置安裝&quot;&gt;windows前置安
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo 問題解決</title>
+    <link href="http://yoursite.com/2020/02/12/hexo/"/>
+    <id>http://yoursite.com/2020/02/12/hexo/</id>
+    <published>2020-02-12T07:08:25.000Z</published>
+    <updated>2020-02-14T09:00:02.144Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h3 id=&quot;修復-hexo-模組缺失&quot;&gt;修復 hexo 模組缺失&lt;a class=&quot;post-anchor&quot; href=&quot;#修復-hexo-模組缺失&quot;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://amychou2
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gitea</title>
+    <link href="http://yoursite.com/2020/02/12/Gitea/"/>
+    <id>http://yoursite.com/2020/02/12/Gitea/</id>
+    <published>2020-02-12T05:49:01.000Z</published>
+    <updated>2020-02-15T05:50:58.798Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h4 id=&quot;Gitea-建置安裝&quot;&gt;Gitea 建置安裝&lt;a class=&quot;post-anchor&quot; href=&quot;#Gitea-建置安裝&quot;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;拉取&lt;a href=&quot;https://docs.gitea.i
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LDAP</title>
+    <link href="http://yoursite.com/2020/02/11/LDAP/"/>
+    <id>http://yoursite.com/2020/02/11/LDAP/</id>
+    <published>2020-02-11T07:00:58.000Z</published>
+    <updated>2020-02-15T10:06:04.540Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h3 id=&quot;LDAP-輕型目錄存取協定-Lightweight-Directory-Access-Protocol&quot;&gt;LDAP (輕型目錄存取協定-Lightweight Directory Access Protocol)&lt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Account" scheme="http://yoursite.com/tags/Account/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>port knocking</title>
+    <link href="http://yoursite.com/2020/01/14/port%20knocking/"/>
+    <id>http://yoursite.com/2020/01/14/port%20knocking/</id>
+    <published>2020-01-14T07:08:00.000Z</published>
+    <updated>2020-01-31T08:46:54.266Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;port knocking&lt;/p&gt;
+&lt;p&gt;透過多一層port防護阻擋駭客攻擊，需透過特定順序port暗號，才能開啟特定port連線。&lt;/p&gt;
+&lt;p&gt;下載 knock&lt;/p&gt;
+&lt;p&gt;apt update&lt;br&gt;apt inst
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Info" scheme="http://yoursite.com/tags/Info/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker2</title>
+    <link href="http://yoursite.com/2019/11/19/Docker2/"/>
+    <id>http://yoursite.com/2019/11/19/Docker2/</id>
+    <published>2019-11-19T07:11:28.000Z</published>
+    <updated>2020-02-07T05:58:54.299Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h6 id=&quot;部署容器權限問題&quot;&gt;部署容器權限問題&lt;a class=&quot;post-anchor&quot; href=&quot;#部署容器權限問題&quot;&gt;&lt;/a&gt;&lt;/h6&gt;&lt;p&gt;將使用者新增至Docker群組，若無Docker群組，則先創建群組。&lt;/p
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>redis</title>
+    <link href="http://yoursite.com/2019/09/02/redis/"/>
+    <id>http://yoursite.com/2019/09/02/redis/</id>
+    <published>2019-09-02T02:58:00.000Z</published>
+    <updated>2020-01-31T04:01:27.947Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://blog.51cto.com/imysqldba/1403866&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;redis aof 檔修復&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;備份&lt;br
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>zookeeper 日誌檔為零解決方法</title>
+    <link href="http://yoursite.com/2019/08/30/zookeep%20log%E7%82%BA%E9%9B%B6/"/>
+    <id>http://yoursite.com/2019/08/30/zookeep%20log%E7%82%BA%E9%9B%B6/</id>
+    <published>2019-08-30T02:48:00.000Z</published>
+    <updated>2020-02-14T08:53:08.672Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://www.itread01.com/content/1544717358.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;檢視日誌檔&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a hr
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Docker-Zookeeper" scheme="http://yoursite.com/tags/Docker-Zookeeper/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Filebeat install</title>
+    <link href="http://yoursite.com/2019/06/26/Filebeat%20install/"/>
+    <id>http://yoursite.com/2019/06/26/Filebeat%20install/</id>
+    <published>2019-06-26T03:38:28.000Z</published>
+    <updated>2020-01-31T04:00:34.504Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h5 id=&quot;Linux-Ubuntu-16-04-下載-Filebeat&quot;&gt;Linux Ubuntu 16.04 下載 Filebeat&lt;a class=&quot;post-anchor&quot; href=&quot;#Linux-Ubuntu-16
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Grafana &amp;　ELK</title>
+    <link href="http://yoursite.com/2019/05/13/ELK/"/>
+    <id>http://yoursite.com/2019/05/13/ELK/</id>
+    <published>2019-05-13T08:39:28.000Z</published>
+    <updated>2020-02-05T06:26:59.521Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h3 id=&quot;簡介&quot;&gt;簡介&lt;a class=&quot;post-anchor&quot; href=&quot;#簡介&quot;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;監控平台方案 Grafana+Influxdb+Telegraf&lt;/p&gt;
+&lt;p&gt;[T]：Telegraf&lt;br
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Docker-ELK" scheme="http://yoursite.com/tags/Docker-ELK/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ansible</title>
+    <link href="http://yoursite.com/2019/02/26/Ansible/"/>
+    <id>http://yoursite.com/2019/02/26/Ansible/</id>
+    <published>2019-02-26T08:19:28.000Z</published>
+    <updated>2020-01-31T03:59:08.901Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h3 id=&quot;簡介&quot;&gt;簡介&lt;a class=&quot;post-anchor&quot; href=&quot;#簡介&quot;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Asible 為減少重複性工作的操作，使用Playbook編排任務，為Jason格式的YAML文件，為一種輕量
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Ansible" scheme="http://yoursite.com/tags/Ansible/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Telegraf</title>
+    <link href="http://yoursite.com/2019/02/26/telegraf/"/>
+    <id>http://yoursite.com/2019/02/26/telegraf/</id>
+    <published>2019-02-26T08:19:28.000Z</published>
+    <updated>2020-01-31T04:01:35.461Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h3 id=&quot;簡介&quot;&gt;簡介&lt;a class=&quot;post-anchor&quot; href=&quot;#簡介&quot;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3 id=&quot;Ubuntu-apt-安裝-Telegraf-1-3-5&quot;&gt;Ubuntu (apt) 安裝 Tele
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>influxdb container log刪除</title>
+    <link href="http://yoursite.com/2019/01/01/influxdb%20container%20log%E5%88%AA%E9%99%A4/"/>
+    <id>http://yoursite.com/2019/01/01/influxdb%20container%20log%E5%88%AA%E9%99%A4/</id>
+    <published>2019-01-01T08:19:28.000Z</published>
+    <updated>2020-01-31T08:46:41.823Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h5 id=&quot;刪除正在寫入之log。&quot;&gt;刪除正在寫入之log。&lt;a class=&quot;post-anchor&quot; href=&quot;#刪除正在寫入之log。&quot;&gt;&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;cat /dev/null &gt; container_lo
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Docker-InfluxDB" scheme="http://yoursite.com/tags/Docker-InfluxDB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GCP增加硬碟大小</title>
+    <link href="http://yoursite.com/2019/01/01/%E5%A2%9E%E5%8A%A0gcp%E7%A1%AC%E7%A2%9F%E5%A4%A7%E5%B0%8F/"/>
+    <id>http://yoursite.com/2019/01/01/%E5%A2%9E%E5%8A%A0gcp%E7%A1%AC%E7%A2%9F%E5%A4%A7%E5%B0%8F/</id>
+    <published>2019-01-01T08:19:28.000Z</published>
+    <updated>2020-01-31T03:58:34.388Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h5 id=&quot;GCP增加硬碟大小，online。&quot;&gt;GCP增加硬碟大小，online。&lt;a class=&quot;post-anchor&quot; href=&quot;#GCP增加硬碟大小，online。&quot;&gt;&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;GCP上編輯更改硬碟
+      
+    
+    </summary>
+    
+    
+    
+      <category term="GCP" scheme="http://yoursite.com/tags/GCP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker</title>
+    <link href="http://yoursite.com/2018/11/19/Docker/"/>
+    <id>http://yoursite.com/2018/11/19/Docker/</id>
+    <published>2018-11-19T07:11:28.000Z</published>
+    <updated>2020-02-07T05:58:20.359Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;rkt&lt;br&gt;CoreOS ：為一種輕量的linux作業系統，支援docker、rkt兩種容器管理，以及自己開發的etcd、fleet工具，為CoreOS自行開發的產品。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://do
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Batch</title>
+    <link href="http://yoursite.com/2018/11/10/batch/"/>
+    <id>http://yoursite.com/2018/11/10/batch/</id>
+    <published>2018-11-10T07:11:28.000Z</published>
+    <updated>2020-01-31T03:59:24.876Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h4 id=&quot;註釋&quot;&gt;註釋&lt;a class=&quot;post-anchor&quot; href=&quot;#註釋&quot;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;blockquote&gt;&lt;p&gt;REM&lt;br&gt;::&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;&lt;p
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Script" scheme="http://yoursite.com/tags/Script/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 常用指令</title>
+    <link href="http://yoursite.com/2018/11/10/linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
+    <id>http://yoursite.com/2018/11/10/linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</id>
+    <published>2018-11-10T07:11:28.000Z</published>
+    <updated>2020-02-04T03:52:43.770Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;vi為Linux預設文書模式，vi有兩種操作模式，分為指令模式（Command）和輸入模式（Insert）。&lt;/p&gt;
+&lt;h3 id=&quot;常用文字操作指令&quot;&gt;常用文字操作指令&lt;a class=&quot;post-anchor&quot; href
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 常用指令2</title>
+    <link href="http://yoursite.com/2018/11/10/linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A42/"/>
+    <id>http://yoursite.com/2018/11/10/linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A42/</id>
+    <published>2018-11-10T07:11:28.000Z</published>
+    <updated>2020-02-06T08:34:00.317Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h3 id=&quot;Linux-Arch-更改hostname&quot;&gt;Linux Arch 更改hostname&lt;a class=&quot;post-anchor&quot; href=&quot;#Linux-Arch-更改hostname&quot;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2018/11/08/hello-world/"/>
+    <id>http://yoursite.com/2018/11/08/hello-world/</id>
+    <published>2018-11-08T06:45:03.209Z</published>
+    <updated>2019-06-04T03:05:56.465Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Che
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>軟體&amp;參考文件</title>
+    <link href="http://yoursite.com/2018/11/05/source/"/>
+    <id>http://yoursite.com/2018/11/05/source/</id>
+    <published>2018-11-05T07:11:28.000Z</published>
+    <updated>2020-02-12T02:38:51.290Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h6 id=&quot;密碼管理工具&quot;&gt;密碼管理工具&lt;a class=&quot;post-anchor&quot; href=&quot;#密碼管理工具&quot;&gt;&lt;/a&gt;&lt;/h6&gt;&lt;p&gt;&lt;a href=&quot;https://free.com.tw/keepass-passwo
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Info" scheme="http://yoursite.com/tags/Info/"/>
+    
+  </entry>
+  
+</feed>

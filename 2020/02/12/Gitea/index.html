@@ -23,7 +23,8 @@
     
 <link rel="stylesheet" href="/style/style.css">
 
-  <meta name="generator" content="Hexo 4.2.0"></head>
+  <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="AmyChou" type="application/atom+xml">
+</head>
   <body>
     <canvas id='pagemap'></canvas>
     
@@ -204,14 +205,24 @@
       </div>
     </div>
     <html><head></head><body><h4 id="Gitea-建置安裝">Gitea 建置安裝<a class="post-anchor" href="#Gitea-建置安裝"></a></h4><p>拉取<a href="https://docs.gitea.io/zh-tw/install-with-docker/" target="_blank" rel="noopener">官方</a>新版imgae</p>
-<p>docker pull gitea/gitea:latest</p>
+<blockquote>
+<p>$docker pull gitea/gitea:latest</p>
+</blockquote>
 <p>建立本地Gitea資料夾</p>
-<p>sudo mkdir -p /var/lib/gitea</p>
+<blockquote>
+<p>$sudo mkdir -p /var/lib/gitea</p>
+</blockquote>
 <p>運行Gitea容器</p>
-<p>docker run -d –name=gitea -p 10022:22 -p 10080:3000 -v /var/lib/gitea:/data gitea/gitea:latest</p>
-<h3 id="綁定LDAP每天會發生帳號被停用">綁定LDAP每天會發生帳號被停用<a class="post-anchor" href="#綁定LDAP每天會發生帳號被停用"></a></h3><p>更改本地 /var/lib/gitea/gitea/conf/app.ini </p>
+<blockquote>
+<p>$docker run -d –name=gitea -p 10022:22 -p 10080:3000 -v /var/lib/gitea:/data gitea/gitea:latest</p>
+</blockquote>
+<h3 id="綁定LDAP每天會發生帳號被停用">綁定LDAP每天會發生帳號被停用<a class="post-anchor" href="#綁定LDAP每天會發生帳號被停用"></a></h3><p>發現每天定期更新及健康檢查時，綁定之LDAP帳號會被停用。</p>
+<p>更改本地 <a href="https://github.com/go-gitea/gitea/blob/master/custom/conf/app.ini.sample" target="_blank" rel="noopener">/var/lib/gitea/gitea/conf/app.ini</a> 之檔案</p>
 <p>增加以下設置</p>
-<p>[cron.sync_external_users]<br>; Synchronize external user data when starting server (default false)<br>RUN_AT_START = false<br>SCHEDULE = @every 24h (可先更改時間確認是否設置成功)<br>UPDATE_EXISTING = false</p>
+<p>同步外部用戶數據（僅支持LDAP用戶同步）選項</p>
+<blockquote>
+<p>[cron.sync_external_users]<br>;啟動服務器時同步外部用戶數據（默認為false）<br>RUN_AT_START = false<br>SCHEDULE = @every 24h (可先更改時間為10m確認是否設置成功)<br>;創建新用戶，更新現有用戶數據並禁用不再位於外部源中的用戶（默認為true）<br>UPDATE_EXISTING = false</p>
+</blockquote>
 </body></html>
 
   

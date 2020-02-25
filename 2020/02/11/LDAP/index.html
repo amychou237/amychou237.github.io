@@ -23,13 +23,14 @@
     
 <link rel="stylesheet" href="/style/style.css">
 
-  <meta name="generator" content="Hexo 4.2.0"></head>
+  <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="AmyChou" type="application/atom+xml">
+</head>
   <body>
     <canvas id='pagemap'></canvas>
     
     <div id="post-toc" class="animated hiddenToc hide">
       <span class="title">Toc</span>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#LDAP-輕型目錄存取協定-Lightweight-Directory-Access-Protocol"><span class="toc-text">LDAP (輕型目錄存取協定-Lightweight Directory Access Protocol)</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#LDAP-輕型目錄存取協定-Lightweight-Directory-Access-Protocol"><span class="toc-text">LDAP (輕型目錄存取協定-Lightweight Directory Access Protocol)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#LDAP存儲規則"><span class="toc-text">LDAP存儲規則</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div id="fixed-menu-wrap">
@@ -204,7 +205,12 @@
       </div>
     </div>
     <html><head></head><body><h3 id="LDAP-輕型目錄存取協定-Lightweight-Directory-Access-Protocol">LDAP (輕型目錄存取協定-Lightweight Directory Access Protocol)<a class="post-anchor" href="#LDAP-輕型目錄存取協定-Lightweight-Directory-Access-Protocol"></a></h3><p><a href="https://github.com/osixia/docker-openldap" target="_blank" rel="noopener">Docker 版本 open-ldap</a></p>
-<p>一種目錄服務，用來整合人員帳號資訊，</p>
+<p>一種類似電話簿的目錄服務，用來整合查找人員帳號資訊，以樹狀架構存放人員帳密、通訊錄…等資訊，不同於資料庫用來讀寫，專注於讀的功能上的使用。</p>
+<h5 id="LDAP存儲規則">LDAP存儲規則<a class="post-anchor" href="#LDAP存儲規則"></a></h5><p><a href="https://amychou237.github.io/images/000017.jpg" target="_blank" rel="noopener" data-caption="image" data-fancybox="images"><img src="https://amychou237.github.io/images/000017.jpg" alt="image"></a></p>
+<p>DN(Distinguished Name)：區分名(識別名稱)。</p>
+<p>DC(Domain Component)：網域元件(區域網路)。</p>
+<p>CN(Common Name)：用戶/服務器名(使用者名稱)。</p>
+<p>OU(Organization Unit)： 組織單元，最多可有四級(組織單位)。</p>
 </body></html>
 
   

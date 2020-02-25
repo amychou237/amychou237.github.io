@@ -23,13 +23,14 @@
     
 <link rel="stylesheet" href="/style/style.css">
 
-  <meta name="generator" content="Hexo 4.2.0"></head>
+  <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="AmyChou" type="application/atom+xml">
+</head>
   <body>
     <canvas id='pagemap'></canvas>
     
     <div id="post-toc" class="animated hiddenToc hide">
       <span class="title">Toc</span>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#新建hexo-blog"><span class="toc-text">新建hexo blog</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#前置安裝"><span class="toc-text">前置安裝</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#null"><span class="toc-text"></span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#markdown-軟體推薦"><span class="toc-text">markdown 軟體推薦</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#查詢git-遠端網址"><span class="toc-text">查詢git 遠端網址</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#新建hexo-blog"><span class="toc-text">新建hexo blog</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#windows前置安裝"><span class="toc-text">windows前置安裝</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#安裝gitHub-hexo"><span class="toc-text">安裝gitHub+hexo</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#建置使用者資料夾"><span class="toc-text">建置使用者資料夾</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#hexo指令-皆在blog路徑底下執行指令"><span class="toc-text">hexo指令 (皆在blog路徑底下執行指令)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#markdown-軟體推薦"><span class="toc-text">markdown 軟體推薦</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#查詢git-遠端網址"><span class="toc-text">查詢git 遠端網址</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div id="fixed-menu-wrap">
@@ -203,13 +204,49 @@
       <div>
       </div>
     </div>
-    <html><head></head><body><h3 id="新建hexo-blog">新建hexo blog<a class="post-anchor" href="#新建hexo-blog"></a></h3><h5 id="前置安裝">前置安裝<a class="post-anchor" href="#前置安裝"></a></h5><ul>
-<li>Node.js (版本需不低於 8.10，建議使用 Node.js 10.0 及以上版本)</li>
-<li><a href="https://gitbook.tw/chapters/using-git/add-to-git.html" target="_blank" rel="noopener">Git</a></li>
+    <html><head></head><body><h3 id="新建hexo-blog">新建hexo blog<a class="post-anchor" href="#新建hexo-blog"></a></h3><h5 id="windows前置安裝">windows前置安裝<a class="post-anchor" href="#windows前置安裝"></a></h5><ul>
+<li><input checked disabled type="checkbox"> Node.js (版本需不低於 8.10，建議使用 Node.js 10.0 及以上版本)</li>
+<li><input checked disabled type="checkbox"> <a href="https://gitbook.tw/chapters/using-git/add-to-git.html" target="_blank" rel="noopener">Git</a></li>
 </ul>
-<h5 id><a class="post-anchor" href="#"></a></h5><h5 id="markdown-軟體推薦">markdown 軟體推薦<a class="post-anchor" href="#markdown-軟體推薦"></a></h5><p><a href="https://hackmd.io/s/quick-start-tw" target="_blank" rel="noopener">HackMD</a></p>
+<h5 id="安裝gitHub-hexo">安裝gitHub+hexo<a class="post-anchor" href="#安裝gitHub-hexo"></a></h5><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方文檔</a></p>
+<blockquote>
+<p>$ npm install -g hexo-cli</p>
+</blockquote>
+<h5 id="建置使用者資料夾">建置使用者資料夾<a class="post-anchor" href="#建置使用者資料夾"></a></h5><p>e.g. D:\ <em>username</em></p>
+<p>在 <em>username</em> 底下初始化blog</p>
+<blockquote>
+<p>$ hexo init <<em><strong>folder</strong></em>></p>
+</blockquote>
+<blockquote>
+<p>$ cd <<em><strong>folder</strong></em>></p>
+</blockquote>
+<blockquote>
+<p>$ npm install</p>
+</blockquote>
+<h5 id="hexo指令-皆在blog路徑底下執行指令">hexo指令 (皆在blog路徑底下執行指令)<a class="post-anchor" href="#hexo指令-皆在blog路徑底下執行指令"></a></h5><blockquote>
+<p>$ hexo new <em><strong>articlename</strong></em></p>
+</blockquote>
+<p>新增文章頁面</p>
+<blockquote>
+<p>$hexo clean </p>
+</blockquote>
+<p>清除快取、已生成靜態檔</p>
+<blockquote>
+<p>$ hexo s</p>
+</blockquote>
+<p>s= server (啟動伺服器，可預覽網站，文件更動儲存會自動更新 <em><a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></em>)</p>
+<blockquote>
+<p>$ hexo g -d</p>
+</blockquote>
+<p>g= generate (生成靜態檔案)</p>
+<p>d= deploy (部署網站)</p>
+<blockquote>
+<p>$ git log</p>
+</blockquote>
+<p>查看推版紀錄</p>
+<h5 id="markdown-軟體推薦">markdown 軟體推薦<a class="post-anchor" href="#markdown-軟體推薦"></a></h5><p><a href="https://hackmd.io/s/quick-start-tw" target="_blank" rel="noopener">HackMD</a></p>
 <h5 id="查詢git-遠端網址">查詢git 遠端網址<a class="post-anchor" href="#查詢git-遠端網址"></a></h5><blockquote>
-<p>$ git remote -v</p>
+<p>$ git remote -v </p>
 </blockquote>
 </body></html>
 

@@ -23,7 +23,8 @@
     
 <link rel="stylesheet" href="/style/style.css">
 
-  <meta name="generator" content="Hexo 4.2.0"></head>
+  <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="AmyChou" type="application/atom+xml">
+</head>
   <body>
     <canvas id='pagemap'></canvas>
     
@@ -201,11 +202,17 @@
     <html><head></head><body><p><a href="https://www.itread01.com/content/1544717358.html" target="_blank" rel="noopener">檢視日誌檔</a></p>
 <p><a href="https://www.jianshu.com/p/2f03312afe2f" target="_blank" rel="noopener">zk異常日誌刪除</a><br>zk /datalog/version-2/ 下log檔案大小為零，造成container無法開啟。</p>
 <p><a href="https://blog.csdn.net/yjk13703623757/article/details/80283729" target="_blank" rel="noopener">循環日誌設定</a></p>
+<blockquote>
 <p>vim /etc/docker/daemon.json</p>
+</blockquote>
 <p>“<a href="http://f613ce8f.m.daocloud.io"" target="_blank" rel="noopener">http://f613ce8f.m.daocloud.io"</a><br>{<br>  “registry-mirrors”: [],<br>  “log-driver”:”json-file”,<br>  “log-opts”: {“max-size”:”500m”, “max-file”:”3”}<br>}</p>
 <p>重啟 daemon 跟 docker</p>
+<blockquote>
 <p>systemctl daemon-reload</p>
+</blockquote>
+<blockquote>
 <p>systemctl restart docker</p>
+</blockquote>
 </body></html>
 
   
