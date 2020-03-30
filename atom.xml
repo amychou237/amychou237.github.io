@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-25T03:56:30.944Z</updated>
+  <updated>2020-03-30T02:04:24.376Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,50 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Dockerfile</title>
+    <link href="http://yoursite.com/2020/03/30/Dockerfile/"/>
+    <id>http://yoursite.com/2020/03/30/Dockerfile/</id>
+    <published>2020-03-30T01:41:18.000Z</published>
+    <updated>2020-03-30T02:04:24.376Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body onload=&quot;ShowTime()&quot;&gt;&lt;p&gt;Dockerfile介紹&lt;/p&gt;
+&lt;p&gt;Dockerfile ENV &amp; ARG 有什麼不同？&lt;/p&gt;
+&lt;p&gt;ARG：指定變數。&lt;br&gt;ENV：可指定構建時的環境變數，可接收ARG指定
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My Gallery</title>
+    <link href="http://yoursite.com/2020/02/25/My-Gallery/"/>
+    <id>http://yoursite.com/2020/02/25/My-Gallery/</id>
+    <published>2020-02-25T09:12:42.000Z</published>
+    <updated>2020-02-25T09:14:58.666Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>hexo_blog</title>
     <link href="http://yoursite.com/2020/02/13/hexo2/"/>
     <id>http://yoursite.com/2020/02/13/hexo2/</id>
     <published>2020-02-13T06:02:31.000Z</published>
-    <updated>2020-02-25T03:56:30.944Z</updated>
+    <updated>2020-02-25T09:17:17.119Z</updated>
     
     <summary type="html">
     
@@ -420,48 +459,6 @@
     
     
       <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/11/08/hello-world/"/>
-    <id>http://yoursite.com/2018/11/08/hello-world/</id>
-    <published>2018-11-08T06:45:03.209Z</published>
-    <updated>2019-06-04T03:05:56.465Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Che
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>軟體&amp;參考文件</title>
-    <link href="http://yoursite.com/2018/11/05/source/"/>
-    <id>http://yoursite.com/2018/11/05/source/</id>
-    <published>2018-11-05T07:11:28.000Z</published>
-    <updated>2020-02-12T02:38:51.290Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h6 id=&quot;密碼管理工具&quot;&gt;密碼管理工具&lt;a class=&quot;post-anchor&quot; href=&quot;#密碼管理工具&quot;&gt;&lt;/a&gt;&lt;/h6&gt;&lt;p&gt;&lt;a href=&quot;https://free.com.tw/keepass-passwo
-      
-    
-    </summary>
-    
-    
-    
-      <category term="Info" scheme="http://yoursite.com/tags/Info/"/>
     
   </entry>
   
