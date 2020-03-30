@@ -41,21 +41,6 @@
   </entry>
   
   <entry>
-    <title>My Gallery</title>
-    <link href="http://yoursite.com/2020/02/25/My-Gallery/"/>
-    <id>http://yoursite.com/2020/02/25/My-Gallery/</id>
-    <published>2020-02-25T09:12:42.000Z</published>
-    <updated>2020-02-25T09:14:58.666Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>hexo_blog</title>
     <link href="http://yoursite.com/2020/02/13/hexo2/"/>
     <id>http://yoursite.com/2020/02/13/hexo2/</id>
@@ -459,6 +444,26 @@
     
     
       <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2018/11/08/hello-world/"/>
+    <id>http://yoursite.com/2018/11/08/hello-world/</id>
+    <published>2018-11-08T06:45:03.209Z</published>
+    <updated>2019-06-04T03:05:56.465Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Che
+      
+    
+    </summary>
+    
+    
     
   </entry>
   
